@@ -2,8 +2,6 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 
 class Pixel {
-  // ... (omitting the full class for brevity, but it's the same as your JS provided)
-  // Just ensure to add types for constructor arguments
   width: number;
   height: number;
   ctx: CanvasRenderingContext2D;

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/app/globals.css";
+import "@/styles/globals.css";
 import Background from "@/components/Background";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fabio Toh | Portfolio",
+  title: "Your Name | Portfolio", // Replace with your name
   description: "A portfolio showcasing projects in OS development, AI, and web technologies.",
 };
 
