@@ -53,7 +53,7 @@ const Projects = () => {
     return (
         <Section id="projects">
             <h2 className="text-3xl font-bold text-center mb-4 tracking-tight">Featured Projects</h2>
-            <p className="text-center text-slate-400 mb-12">Core projects I'm proud to have built.</p>
+            <p className="text-center text-slate-400 mb-12">Core projects I&apos;m proud to have built.</p>
             <motion.div 
                 className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
                 variants={containerVariants}
