@@ -1,23 +1,17 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import Experience from "@/components/Experience";
-import Research from "@/components/Research";
-import Footer from "@/components/Footer";
+import About from "@/components/about";
+import Hero from "@/components/hero";
+import Projects from "@/components/projects";
+import Experience from "@/components/experience";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Research />
-      </main>
-      <Footer />
-    </>
+    <main className="flex flex-col items-center px-4">
+      <Hero />
+      <About />
+      <Projects />
+      <Experience />
+      <Contact />
+    </main>
   );
 }

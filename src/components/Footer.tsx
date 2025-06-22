@@ -1,23 +1,16 @@
-import React from 'react';
-import { personalInfo } from '@/lib/data';
-import { Github, Linkedin } from 'lucide-react';
+import React from "react";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="w-full py-8 border-t border-slate-800/80 mt-16">
-      <div className="container mx-auto text-center text-slate-400">
-        <div className="flex justify-center gap-6 mb-4">
-          <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
-            <Github size={24} />
-          </a>
-          <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
-            <Linkedin size={24} />
-          </a>
-        </div>
-        <p>&copy; {new Date().getFullYear()} {personalInfo.name}. All Rights Reserved.</p>
-      </div>
+    <footer className="mb-10 px-4 text-center text-gray-500">
+      <small className="mb-2 block text-xs">
+        &copy; 2024 Fabio Canavarro. All rights reserved.
+      </small>
+      <p className="text-xs">
+        <span className="font-semibold">About this website:</span> built with
+        React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
+        Framer Motion, React Email & Resend, Vercel hosting.
+      </p>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from './Section';
+import Section from './section';
 import { researchPapers } from '@/lib/data';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 

@@ -19,3 +19,7 @@ export interface Research {
     description: string;
     role: string;
 }
+
+import { links } from "./data";
+
+export type SectionName = (typeof links)[number]["name"];
