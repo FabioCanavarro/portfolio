@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+  
+  body {
+    background-color: hsl(240 10% 3.9%);
+    color: hsl(0 0% 98%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.glassy-card {
+  background-color: rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(30 41 59 / 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
