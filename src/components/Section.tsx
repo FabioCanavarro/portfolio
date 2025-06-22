@@ -10,7 +10,7 @@ interface SectionProps {
 
 const Section = ({ children, className, id }: SectionProps) => {
   return (
-    <motion.div
+    <motion.section
       id={id}
       className={`w-full max-w-5xl mx-auto py-16 md:py-24 px-4 ${className}`}
       initial={{ opacity: 0, y: 50 }}
@@ -19,7 +19,7 @@ const Section = ({ children, className, id }: SectionProps) => {
       transition={{ duration: 0.6 }}
     >
       {children}
-    </motion.div>
+    </motion.section>
   );
 };
 
