@@ -1,23 +1,24 @@
-import React from 'react';
-import { personalInfo } from '@/lib/data';
-import { Github, Linkedin } from 'lucide-react';
+import React from "react";
+import { useFormStatus } from "react-dom";
+import { FaPaperPlane } from "react-icons/fa";
 
-const Footer = () => {
+export default function SubmitBtn() {
+  const { pending } = useFormStatus();
+
   return (
-    <footer className="w-full py-8 border-t border-slate-800/80 mt-16">
-      <div className="container mx-auto text-center text-slate-400">
-        <div className="flex justify-center gap-6 mb-4">
-          <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
-            <Github size={24} />
-          </a>
-          <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
-            <Linkedin size={24} />
-          </a>
-        </div>
-        <p>&copy; {new Date().getFullYear()} {personalInfo.name}. All Rights Reserved.</p>
-      </div>
-    </footer>
+    <button
+      type="submit"
+      className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
+      disabled={pending}
+    >
+      {pending ? (
+        <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+      ) : (
+        <>
+          Submit{" "}
+          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+        </>
+      )}
+    </button>
   );
-};
-
-export default Footer;
+}
