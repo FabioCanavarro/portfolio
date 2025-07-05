@@ -109,9 +109,14 @@ const Navbar = () => {
   );
 };
 
+type AnimatedTextProps = {
+  text: string;
+  el?: React.ElementType; // The element type can be 'p', 'h1', 'div', etc.
+  className?: string;
+};
 
 // Helper component for animated text
-const AnimatedText = ({ text, el: Wrapper = 'p', className }) => {
+const AnimatedText = ({ text, el: Wrapper = 'p', className }: AnimatedTextProps) => {
   const variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i : number) => ({
