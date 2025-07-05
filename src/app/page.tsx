@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ExternalLink, Cpu, Server, Bot, Code, Gamepad2, Microscope, GitPullRequest, Building, Sparkles } from 'lucide-react';
+import { easeOut, motion } from 'framer-motion';
+import { Github, Linkedin, Mail, ExternalLink, Cpu, Server, Bot, Code, Gamepad2, GitPullRequest, Building, Sparkles } from 'lucide-react';
 
 // --- Background Component ---
 const GridBackground = () => {
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e : MouseEvent) => {
       const { clientX, clientY } = e;
       const background = document.getElementById('interactive-background');
       if (background) {
@@ -24,7 +24,11 @@ const GridBackground = () => {
 
   return (
     <>
-      <style jsx="true" global="true">{`
+      <style jsx={true} global={true}>{`
+        html {
+          scroll-behavior: smooth;
+        }
+
         @keyframes fadeIn {
           from { opacity: 0; }
           to { opacity: 1; }
@@ -64,25 +68,67 @@ const GridBackground = () => {
   );
 };
 
+// --- Navbar Component ---
+const Navbar = () => {
+  const navLinks = [
+    { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  return (
+    <motion.nav 
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5, ease: easeOut }}
+        className="fixed top-0 left-0 right-0 z-50 bg-crust/50 backdrop-blur-md border-b border-surface0/50"
+    >
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex-shrink-0">
+            <a href="#" className="text-xl font-bold text-rosewater hover:text-flamingo transition-colors">
+              Fabio Canavarro
+            </a>
+          </div>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-subtext1 hover:text-text px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.nav>
+  );
+};
+
 
 // Helper component for animated text
 const AnimatedText = ({ text, el: Wrapper = 'p', className }) => {
   const variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({
+    visible: (i : number) => ({
       opacity: 1,
       y: 0,
       transition: {
         delay: i * 0.05,
         duration: 0.5,
-        ease: "easeOut"
+        ease: easeOut 
       }
     })
   };
 
   return (
     <Wrapper className={className}>
-      {text.split(" ").map((word, i) => (
+      {text.split(" ").map((word : string, i : number) => (
         <motion.span
           key={i}
           variants={variants}
@@ -181,7 +227,7 @@ export default function Portfolio() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
+        ease: easeOut 
       }
     }
   };
@@ -207,8 +253,9 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen text-text font-sans antialiased" style={{ backgroundColor: colors.base }}>
       <GridBackground />
+      <Navbar />
 
-      <main className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <main className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-32 md:pb-16">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -234,10 +281,10 @@ export default function Portfolio() {
               <a href="https://github.com/FabioCanavarro" target="_blank" rel="noopener noreferrer" className="text-subtext1 hover:text-mauve transition-colors duration-300">
                 <Github size={28} />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-subtext1 hover:text-blue transition-colors duration-300">
+              <a href="https://www.linkedin.com/in/fabio-canavarro-584b232a7/" target="_blank" rel="noopener noreferrer" className="text-subtext1 hover:text-blue transition-colors duration-300">
                 <Linkedin size={28} />
               </a>
-              <a href="mailto:your.email@example.com" className="text-subtext1 hover:text-rosewater transition-colors duration-300">
+              <a href="mailto:fabiocanavarrotoh@gmail.com" className="text-subtext1 hover:text-rosewater transition-colors duration-300">
                 <Mail size={28} />
               </a>
             </motion.div>
@@ -245,6 +292,7 @@ export default function Portfolio() {
 
           {/* --- About Section --- */}
           <motion.section 
+            id="about"
             className="mb-24"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -254,16 +302,17 @@ export default function Portfolio() {
             <h2 className="text-3xl font-bold mb-6 text-rosewater flex items-center"><Sparkles className="w-6 h-6 mr-3"/>About Me</h2>
             <div className="space-y-4 text-subtext0 text-lg leading-relaxed bg-crust/50 p-6 rounded-xl border border-surface0 backdrop-blur-sm shadow-lg shadow-crust/50">
               <p>
-                I'm a high school junior with a deep passion for computer science, focusing on systems programming, distributed systems, and the Internet of Things. I thrive on challenges and am constantly exploring new technologies to build efficient and impactful projects.
+                I&apos;m a high school junior with a deep passion for computer science, focusing on systems programming, distributed systems, and the Internet of Things. I thrive on challenges and am constantly exploring new technologies to build efficient and impactful projects.
               </p>
               <p>
-                My GitHub contribution graph is a sea of green, a testament to my daily commitment to learning and building. I'm actively involved in the open-source community and believe in the power of collaborative development to drive innovation forward.
+                My GitHub contribution graph is a sea of green, a testament to my daily commitment to learning and building. I&apos;m actively involved in the open-source community and believe in the power of collaborative development to drive innovation forward.
               </p>
             </div>
           </motion.section>
           
           {/* --- Experience Section --- */}
           <motion.section
+            id="experience"
             className="mb-24"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -278,13 +327,13 @@ export default function Portfolio() {
                 </div>
                 <p className="text-md text-blue">Arts&Legend.id (Non-Profit)</p>
                 <p className="mt-4 text-subtext0">
-                    Led the end-to-end development of the organization's official website. Architected and built a modern, responsive platform using Next.js, TypeScript, and Tailwind CSS to support our mission and showcase our work.
+                    Led the end-to-end development of the organization&apos;s official website. Architected and built a modern, responsive platform using Next.js, TypeScript, and Tailwind CSS to support our mission and showcase our work.
                 </p>
             </div>
           </motion.section>
 
           {/* --- Projects Section --- */}
-          <section className="mb-24">
+          <section id="projects" className="mb-24">
             <h2 className="text-3xl font-bold mb-8 text-mauve flex items-center"><Cpu className="w-6 h-6 mr-3"/>Featured Projects</h2>
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 gap-8"
@@ -322,6 +371,7 @@ export default function Portfolio() {
           
           {/* --- Open Source Contributions --- */}
           <motion.section
+            id="opensource"
             className="mb-24"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -352,14 +402,14 @@ export default function Portfolio() {
       </main>
 
       {/* --- Footer --- */}
-      <footer className="relative z-10 text-center py-8">
-        <p className="text-subtext1 mb-2">Let's connect and build something amazing.</p>
-        <a href="mailto:your.email@example.com" className="text-lg text-mauve hover:underline">your.email@example.com</a>
+      <footer id="contact" className="relative z-10 text-center py-8">
+        <p className="text-subtext1 mb-2">Let&apos;s connect and build something amazing.</p>
+        <a href="mailto:fabiocanavarrotoh@gmail.com" className="text-lg text-mauve hover:underline">fabiocanavarrotoh@gmail.com</a>
         <div className="flex justify-center space-x-6 mt-4">
             <a href="https://github.com/FabioCanavarro" target="_blank" rel="noopener noreferrer" className="text-subtext1 hover:text-mauve transition-colors duration-300">
             <Github size={24} />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-subtext1 hover:text-blue transition-colors duration-300">
+            <a href="https://www.linkedin.com/in/fabio-canavarro-584b232a7/" target="_blank" rel="noopener noreferrer" className="text-subtext1 hover:text-blue transition-colors duration-300">
             <Linkedin size={24} />
             </a>
         </div>
