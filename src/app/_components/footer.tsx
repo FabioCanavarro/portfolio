@@ -14,7 +14,7 @@ export default function Footer() {
             </a>
         </div>
         <p className="text-sm text-surface2 mt-8">Designed & Built by Fabio Canavarro</p>
-          <iframe src="https://webring.hackclub.com/embed.html" width="100px" height="60px" frameborder="0" />
+          <iframe src="https://webring.hackclub.com/embed.html" width="100px" height="60px" frameBorder="0" />
       </footer>
   );
 }
