@@ -11,7 +11,6 @@ const GridBackground = () => {
       const { clientX, clientY } = e;
       const background = document.getElementById('interactive-background');
       if (background) {
-        // Use CSS custom properties for efficient updates
         background.style.setProperty('--mouse-x', `${clientX}px`);
         background.style.setProperty('--mouse-y', `${clientY}px`);
       }
@@ -264,7 +263,7 @@ export default function Portfolio() {
           {/* --- Hero Section --- */}
           <section className="text-center mb-20">
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-mauve via-rosewater to-flamingo"
+              className="text-4xl md:text-6xl font-bold mb-4 text-mauve"
               variants={itemVariants}
             >
               Fabio Canavarro
@@ -302,10 +301,11 @@ export default function Portfolio() {
             <h2 className="text-3xl font-bold mb-6 text-rosewater flex items-center"><Sparkles className="w-6 h-6 mr-3"/>About Me</h2>
             <div className="space-y-4 text-subtext0 text-lg leading-relaxed bg-crust/50 p-6 rounded-xl border border-surface0 backdrop-blur-sm shadow-lg shadow-crust/50">
               <p>
-                I&apos;m a high school junior with a deep passion for computer science, focusing on systems programming, distributed systems, and the Internet of Things. I thrive on challenges and am constantly exploring new technologies to build efficient and impactful projects.
+                As a 16-year-old software developer, I specialize in systems programming with a primary focus on Rust, complemented by a strong foundation in Python. I&apos;m captivated by the intricate *ins and outs* of computing—the challenge and control that come with low-level development. The incredible leap in performance from early computers to today&apos;s systems inspires me to engineer software that is both powerful and efficient.
               </p>
               <p>
-                My GitHub contribution graph is a sea of green, a testament to my daily commitment to learning and building. I&apos;m actively involved in the open-source community and believe in the power of collaborative development to drive innovation forward.
+                Currently, I am diving deeper into asynchronous programming in Rust, focusing on advanced benchmarking and optimization techniques to push my code to its limits. My ambition extends to building foundational technologies from the ground up, with long-term goals that include developing a complete operating system, creating a feature-rich database engine named TransientDB, and evolving my assembly project into a full-fledged programming language. I am driven by the pursuit of solving complex problems and engineering the robust, high-performance systems of the future.
+
               </p>
             </div>
           </motion.section>
