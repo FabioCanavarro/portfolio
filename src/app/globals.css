@@ -30,7 +30,6 @@
   --color-red: #f38ba8;
 }
 
-
 body {
   background: var(--color-base);
   color: var(--color-text);
