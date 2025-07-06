@@ -129,7 +129,7 @@ const MainBody = () => {
           >
             <div id="about" className="absolute -top-24"></div>
             <h2 className="text-3xl font-bold mb-6 text-rosewater flex items-center"><Sparkles className="w-6 h-6 mr-3"/>About Me</h2>
-            <div className="space-y-4 text-subtext0 text-lg leading-relaxed bg-crust/50 p-6 rounded-xl border border-surface0 backdrop-blur-sm shadow-lg shadow-crust/50">
+            <div className="space-y-4 text-subtext0 leading-relaxed bg-crust/50 p-6 rounded-xl border border-surface0 backdrop-blur-sm shadow-lg shadow-crust/50">
               <p>
                 As a 16-year-old software developer, I specialize in systems programming with a primary focus on Rust, complemented by a strong foundation in Python. While my passion lies with low-level development, I am also familiar with languages like C++, Java, TypeScript, HTML, and CSS from various projects. I&apos;m captivated by the intricate &quot;ins and outs&quot; of computing—the challenge and control that come with low-level development. The incredible leap in performance from early computers to today&apos;s systems inspires me to engineer software that is both powerful and efficient.
               </p>
