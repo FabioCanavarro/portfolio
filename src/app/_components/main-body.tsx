@@ -156,7 +156,7 @@ const MainBody = () => {
                     <span className="text-sm text-subtext1">Present</span>
                 </div>
                 <p className="text-md text-blue">Arts&Legend.id (Non-Profit)</p>
-              {/* //! Once the website has been fully deployed without lorem ipsum than i can inlcude this */}
+              {/* //! Once the website has been fully deployed without lorem ipsum than i can include this */}
               {/* 
                 <a 
                   href="https://artslegendsdeploy.vercel.app/"
