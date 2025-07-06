@@ -59,8 +59,8 @@ const GridBackground = () => {
           
           /* The static grid lines using a subtle palette color */
           background-image: 
-            repeating-linear-gradient(90deg, rgba(147, 154, 183, 0.1) 0px, rgba(147, 154, 183, 0.1) 1px, transparent 1px, transparent 40px),
-            repeating-linear-gradient(0deg, rgba(147, 154, 183, 0.1) 0px, rgba(147, 154, 183, 0.1) 1px, transparent 1px, transparent 40px);
+            repeating-linear-gradient(90deg, rgba(117, 124, 153, 0.15) 0px, rgba(117, 124, 153, 0.15) 1px, transparent 1px, transparent 40px),
+            repeating-linear-gradient(0deg, rgba(117, 124, 153, 0.15) 0px, rgba(117, 124, 153, 0.15) 1px, transparent 1px, transparent 40px);
           
           animation: fadeIn 2s ease-in-out;
         }

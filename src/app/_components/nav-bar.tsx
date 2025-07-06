@@ -13,7 +13,7 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: easeOut }}
-        className="fixed top-0 left-0 right-0 z-50 bg-crust/50 backdrop-blur-md border-b border-surface0/50"
+        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-b-surface2"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -28,7 +28,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-subtext1 hover:text-text px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-subtext1 hover:text-text px-3 py-2 rounded-md text-base font-medium transition-colors"
                 >
                   {link.name}
                 </a>

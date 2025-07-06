@@ -1,27 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #24273a; /* Catppuccin Macchiato Base */
+  --foreground: #cad3f5; /* Catppuccin Macchiato Text */
   scroll-behavior: smooth;
 }
 
-@theme inline {
+@theme {
+  /* Base config */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom Catppuccin Macchiato Palette */
+  --color-base: #24273a;
+  --color-crust: #1e2030;
+  --color-surface0: #363a4f;
+  --color-surface2: #575b71;
+  --color-text: #cad3f5;
+  --color-subtext0: #a5adce;
+  --color-subtext1: #939ab7;
+  --color-mauve: #cba6f7;
+  --color-rosewater: #f5e0dc;
+  --color-flamingo: #f2cdcd;
+  --color-blue: #89b4fa;
+  --color-green: #a6e3a1;
+  --color-sapphire: #74c7ec;
+  --color-red: #f38ba8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-base);
+  color: var(--color-text);
+  font-family: var(--font-sans);
 }

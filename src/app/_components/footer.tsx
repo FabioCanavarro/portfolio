@@ -2,7 +2,8 @@ import { Github, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-      <footer id="contact" className="relative z-10 text-center py-8">
+      <footer className="relative z-10 text-center py-8">
+        <div id="contact" className="absolute -top-24"></div>
         <p className="text-subtext1 mb-2">Let&apos;s connect and build something amazing.</p>
         <a href="mailto:fabiocanavarrotoh@gmail.com" className="text-lg text-mauve hover:underline">fabiocanavarrotoh@gmail.com</a>
         <div className="flex justify-center space-x-6 mt-4">
@@ -13,8 +14,8 @@ export default function Footer() {
             <Linkedin size={24} />
             </a>
         </div>
-        <p className="text-sm text-surface2 mt-8">Designed & Built by Fabio Canavarro</p>
-          <iframe src="https://webring.hackclub.com/embed.html" width="100px" height="60px" frameBorder="0" />
+        <p className="text-base text-surface2 mt-8">Designed & Built by Fabio Canavarro</p>
+        <iframe src="https://webring.hackclub.com/embed.html" width="100px" height="60px" frameBorder="0" className="mx-auto mt-4"/>
       </footer>
   );
 }

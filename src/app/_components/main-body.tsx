@@ -121,13 +121,13 @@ const MainBody = () => {
 
           {/* --- About Section --- */}
           <motion.section 
-            id="about"
-            className="mb-24"
+            className="mb-24 relative"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.7 }}
           >
+            <div id="about" className="absolute -top-24"></div>
             <h2 className="text-3xl font-bold mb-6 text-rosewater flex items-center"><Sparkles className="w-6 h-6 mr-3"/>About Me</h2>
             <div className="space-y-4 text-subtext0 text-lg leading-relaxed bg-crust/50 p-6 rounded-xl border border-surface0 backdrop-blur-sm shadow-lg shadow-crust/50">
               <p>
@@ -142,13 +142,13 @@ const MainBody = () => {
           
           {/* --- Experience Section --- */}
           <motion.section
-            id="experience"
-            className="mb-24"
+            className="mb-24 relative"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.7 }}
           >
+            <div id="experience" className="absolute -top-24"></div>
             <h2 className="text-3xl font-bold mb-6 text-flamingo flex items-center"><Building className="w-6 h-6 mr-3"/>Experience</h2>
             <div className="bg-crust/50 p-6 rounded-xl border border-surface0 backdrop-blur-sm transition-all duration-300 shadow-lg shadow-crust/50 hover:border-flamingo/50 hover:shadow-xl hover:shadow-flamingo/10">
                 <div className="flex justify-between items-start">
@@ -165,14 +165,15 @@ const MainBody = () => {
                   View Website
                   <ExternalLink className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
-                <p className="mt-4 text-subtext0">
+                <p className="mt-4 text-base text-subtext0">
                     Led the end-to-end development of the organization&apos;s official website. Architected and built a modern, responsive platform using Next.js, TypeScript, and Tailwind CSS to support our mission and showcase our work.
                 </p>
             </div>
           </motion.section>
 
           {/* --- Projects Section --- */}
-          <section id="projects" className="mb-24">
+          <section className="mb-24 relative">
+            <div id="projects" className="absolute -top-24"></div>
             <h2 className="text-3xl font-bold mb-8 text-mauve flex items-center"><Cpu className="w-6 h-6 mr-3"/>Featured Projects</h2>
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 gap-8"
@@ -192,7 +193,7 @@ const MainBody = () => {
                       {project.icon}
                       <h3 className="text-xl font-semibold ml-3 text-text">{project.title}</h3>
                     </div>
-                    <p className="text-subtext0 mb-4 h-24">{project.description}</p>
+                    <p className="text-base text-subtext0 mb-4 h-24">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag, i) => (
                         <span key={i} className="text-xs bg-crust text-mauve px-2 py-1 rounded-full border border-surface2">{tag}</span>
@@ -210,13 +211,13 @@ const MainBody = () => {
           
           {/* --- Open Source Contributions --- */}
           <motion.section
-            id="opensource"
-            className="mb-24"
+            className="mb-24 relative"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.7 }}
           >
+            <div id="opensource" className="absolute -top-24"></div>
             <h2 className="text-3xl font-bold mb-6 text-green flex items-center"><GitPullRequest className="w-6 h-6 mr-3"/>Open Source</h2>
              <div className="space-y-4">
                 {contributions.map((contrib, index) => (
