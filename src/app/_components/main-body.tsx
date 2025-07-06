@@ -156,6 +156,8 @@ const MainBody = () => {
                     <span className="text-sm text-subtext1">Present</span>
                 </div>
                 <p className="text-md text-blue">Arts&Legend.id (Non-Profit)</p>
+              {/* //! Once the website has been fully deployed without lorem ipsum than i can inlcude this */}
+              {/* 
                 <a 
                   href="https://artslegendsdeploy.vercel.app/"
                   target="_blank" 
@@ -165,6 +167,7 @@ const MainBody = () => {
                   View Website
                   <ExternalLink className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
+              */}
                 <p className="mt-4 text-base text-subtext0">
                     Led the end-to-end development of the organization&apos;s official website. Architected and built a modern, responsive platform using Next.js, TypeScript, and Tailwind CSS to support our mission and showcase our work.
                 </p>
