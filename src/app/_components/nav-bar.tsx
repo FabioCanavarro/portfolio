@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import { easeOut, motion, AnimatePresence, easeIn } from "framer-motion";
-import { Menu, X } from 'lucide-react';
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,16 +46,19 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav 
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5, ease: easeOut }}
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-b-surface2"
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: easeOut }}
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-b-surface2"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <a href="#" className="text-xl font-bold text-rosewater hover:text-flamingo transition-colors">
+            <a
+              href="#"
+              className="text-xl font-bold text-rosewater hover:text-flamingo transition-colors"
+            >
               Fabio Canavarro
             </a>
           </div>
