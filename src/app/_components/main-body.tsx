@@ -90,7 +90,7 @@ const MainBody = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          {/* --- Hero Section --- */}
+          {/* Hero Section */}
           <section className="text-center mb-20">
             <motion.h1 
               className="text-4xl md:text-6xl font-bold mb-4 text-mauve"
@@ -119,7 +119,7 @@ const MainBody = () => {
             </motion.div>
           </section>
 
-          {/* --- About Section --- */}
+          {/* About Section */}
           <motion.section 
             className="mb-24 relative"
             initial={{ opacity: 0, y: 20 }}
@@ -140,7 +140,7 @@ const MainBody = () => {
             </div>
           </motion.section>
           
-          {/* --- Experience Section --- */}
+          {/* Experience Section */}
           <motion.section
             className="mb-24 relative"
             initial={{ opacity: 0, y: 20 }}
@@ -171,7 +171,7 @@ const MainBody = () => {
             </div>
           </motion.section>
 
-          {/* --- Projects Section --- */}
+          {/* Projects Section */}
           <section className="mb-24 relative">
             <div id="projects" className="absolute -top-24"></div>
             <h2 className="text-3xl font-bold mb-8 text-mauve flex items-center"><Cpu className="w-6 h-6 mr-3"/>Featured Projects</h2>
@@ -209,7 +209,7 @@ const MainBody = () => {
             </motion.div>
           </section>
           
-          {/* --- Open Source Contributions --- */}
+          {/* Open Source Contributions */}
           <motion.section
             className="mb-24 relative"
             initial={{ opacity: 0, y: 20 }}

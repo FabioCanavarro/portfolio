@@ -22,7 +22,7 @@ const jsonLd = {
   alumniOf: "Hackclub" 
 };
 
-// --- Background Component ---
+// Background Component
 const GridBackground = () => {
   useEffect(() => {
     const handleMouseMove = (e : MouseEvent) => {

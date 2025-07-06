@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #24273a; /* Catppuccin Macchiato Base */
-  --foreground: #cad3f5; /* Catppuccin Macchiato Text */
+  --background: #24273a;
+  --foreground: #cad3f5;
   scroll-behavior: smooth;
 }
 
@@ -13,7 +13,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Custom Catppuccin Macchiato Palette */
+  /* Catppuccin Macchiato Palette */
   --color-base: #24273a;
   --color-crust: #1e2030;
   --color-surface0: #363a4f;
