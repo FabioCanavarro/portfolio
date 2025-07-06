@@ -31,7 +31,7 @@ const projects = [
       "A persistent, log-structured key-value store in Rust, and a multi-threaded server-client implementation with a custom network protocol.",
     tags: ["Rust", "Distributed Systems", "Networking", "KVS"],
     icon: <Server className="w-6 h-6 text-blue" />,
-    link: "https://github.com/FabioCanavarro/FerrisLog_Server-Client",
+    link: "https://github.com/FabioCanavarro/FerrisLog-ServerClient",
   },
   {
     title: "Agrobiosync",
@@ -47,7 +47,7 @@ const projects = [
       "A Minecraft mod that introduces time manipulation mechanics for blocks, entities, and entire chunks.",
     tags: ["Java", "Game Modding", "Minecraft"],
     icon: <Gamepad2 className="w-6 h-6 text-flamingo" />,
-    link: "https://github.com/FabioCanavarro/ChronoDomain",
+    link: "https://github.com/FabioCanavarro/Chrono-Domain",
   },
   {
     title: "Iridation",
@@ -55,7 +55,7 @@ const projects = [
       "A custom assembly language created in Rust, designed as a foundational layer for a future programming language.",
     tags: ["Rust", "Compilers", "Assembly"],
     icon: <Code className="w-6 h-6 text-sapphire" />,
-    link: "https://github.com/FabioCanavarro/Iridation",
+    link: "https://github.com/FabioCanavarro/Irridation",
   },
   {
     title: "AI & Computer Vision Projects",
@@ -72,13 +72,13 @@ const contributions = [
     repo: "bifrost/bifrost",
     description:
       "Contributed to an open-source smart lighting system alternative.",
-    link: "https://github.com/bifrost-rs/bifrost/pulls/FabioCanavarro",
+    link: "https://github.com/chrivers/bifrost/pulls/FabioCanavarro",
   },
   {
     repo: "infraust/infraust",
     description:
       "Submitted a pull request to a high-efficiency Minecraft server host.",
-    link: "https://github.com/infraust/infraust/pulls/FabioCanavarro",
+    link: "https://github.com/Shadowner/Infrarust/pulls/FabioCanavarro",
   },
 ];
 
