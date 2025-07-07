@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles, ChevronDown } from "lucide-react";
 
 export default function AboutMe() {
@@ -45,28 +45,30 @@ export default function AboutMe() {
               }`}
             />
           </button>
-          {goalsOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="mt-2"
-            >
-              <p>
-                Currently, I am diving deeper into asynchronous programming in
-                Rust, focusing on advanced benchmarking and optimization
-                techniques to push my code to its limits. My ambition extends to
-                building foundational technologies from the ground up, with
-                long-term goals that include developing a complete operating
-                system, creating a feature-rich database engine named TransientDB,
-                and evolving my assembly project into a full-fledged programming
-                language. I am driven by the pursuit of solving complex problems
-                and engineering the robust, high-performance systems of the
-                future.
-              </p>
-            </motion.div>
-          )}
+          <AnimatePresence>
+            {goalsOpen && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="mt-2"
+              >
+                <p>
+                  Currently, I am diving deeper into asynchronous programming in
+                  Rust, focusing on advanced benchmarking and optimization
+                  techniques to push my code to its limits. My ambition extends to
+                  building foundational technologies from the ground up, with
+                  long-term goals that include developing a complete operating
+                  system, creating a feature-rich database engine named TransientDB,
+                  and evolving my assembly project into a full-fledged programming
+                  language. I am driven by the pursuit of solving complex problems
+                  and engineering the robust, high-performance systems of the
+                  future.
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </motion.section>
