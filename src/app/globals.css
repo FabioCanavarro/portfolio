@@ -35,3 +35,8 @@ body {
   color: var(--color-text);
   font-family: var(--font-sans);
 }
+
+/* Add this for rehype-pretty-code */
+pre {
+  background-color: var(--color-crust) !important;
+}
