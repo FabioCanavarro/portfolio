@@ -8,8 +8,8 @@ interface CustomGridProperties extends React.CSSProperties {
 }
 
 const GridBackground = ({
-    opacityx = 0,
-    opacityy = 1,
+    sizex = 0,
+    sizey = 1,
 }) => {
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
@@ -85,8 +85,8 @@ const GridBackground = ({
             <div 
                 id="interactive-background"
                 style={{
-                    '--grid-start': `${opacityx}px`,
-                    '--grid-end': `${opacityy}px`,
+                    '--grid-start': `${sizex}px`,
+                    '--grid-end': `${sizey}px`,
                 } as CustomGridProperties}
             ></div>
         </>

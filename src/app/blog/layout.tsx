@@ -8,8 +8,8 @@ export default function BlogLayout({
   return (
     <> 
       <GridBackground 
-          opacityx = {0.20}
-          opacityy = {0.1}
+          sizex = {0.45}
+          sizey = {0.2}
       />
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-32 md:pb-16 ">
         {children}
