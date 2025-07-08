@@ -57,8 +57,7 @@ export async function getPostData(slug: string) {
 
   const processedContent = await unified()
     .use(remarkParse)
-    // REMOVE the allowDangerousHtml option from this line
-    .use(remarkRehype) 
+    .use(remarkRehype, { allowDangerousHtml: true }) 
     .use(rehypePrettyCode, {
       theme: "catppuccin-macchiato",
     })
@@ -84,11 +83,9 @@ export async function getPostData(slug: string) {
 
 export function getAllPostSlugs() {
   const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => {
+    return fileNames.map((fileName) => {
     return {
-      params: {
-        slug: fileName.replace(/\.md$/, ""),
-      },
+      slug: fileName.replace(/\.md$/, ""),
     };
   });
 }
