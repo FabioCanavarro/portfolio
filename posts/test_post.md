@@ -1,8 +1,8 @@
 ---
 title: "My First Blog Post"
-date: "2024-07-29"
+date: "2025-07-07"
 description: "An introduction to my new blog where I'll discuss Rust, systems programming, and more."
-tags: ["Rust", "Kernel", "WebDev", "heheheh","skibidi"]
+tags: ["Rust"]
 ---
 
 This is my first blog post! I'm excited to start sharing my journey.

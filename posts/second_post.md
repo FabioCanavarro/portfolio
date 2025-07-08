@@ -1,8 +1,8 @@
 ---
 title: "How a 1976 Chip Revolutionized Computer Efficiency: Understanding the PIC"
-date: "2024-07-29"
-description: "An introduction to my new blog where I'll discuss Rust, systems programming, and more."
-tags: ["Rust", "Kernel", "WebDev", "heheheh","skibidi"]
+date: "2025-07-07"
+description: "An introduction to a component that revolutionized the industry"
+tags: ["Systems", "Kernel", "os"]
 ---
 
 In the initial era of the programming world, the kernel keeps polling hardware devices to know if they have sent any data, which mean that they have wasted significant time and resources, especially with only a single cpu core. How does one solves this major issue to optimize the computational resources?

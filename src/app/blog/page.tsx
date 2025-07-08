@@ -7,6 +7,7 @@ const tagColorMap: { [key: string]: string } = {
   systems: "bg-blue/20 text-blue border-blue/30",
   kernel: "bg-mauve/20 text-mauve border-mauve/30",
   webdev: "bg-green/20 text-green border-green/30",
+  os: "bg-yellow/20 text-yellow border-yellow/30",
   default: "bg-surface2/20 text-subtext1 border-surface2/30",
 };
 
