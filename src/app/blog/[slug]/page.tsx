@@ -5,13 +5,12 @@ import { Metadata } from "next";
 
 // Define the type for the component's props
 type PostProps = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>
 };
 
 export async function generateMetadata({ params }: PostProps): Promise<Metadata> {
-  const post = await getPostData(params.slug);
+  const param = await params; // Ensure params is awaited
+  const post = await getPostData(param.slug);
 
   return {
     title: `${post.title} | Fabio Canavarro`,
@@ -24,7 +23,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Post({ params }: PostProps) {
-  const { slug } = params;
+  const { slug } = await params; // Destructure here
   const postData = await getPostData(slug);
 
   return (
