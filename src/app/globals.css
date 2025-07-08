@@ -28,6 +28,20 @@
   --color-green: #a6e3a1;
   --color-sapphire: #74c7ec;
   --color-red: #f38ba8;
+
+  /* Additional colors */
+  --color-mantle: #181926;
+  --color-surface1: #494d64;
+  --color-overlay0: #6e738d;
+  --color-overlay1: #8087a2;
+  --color-overlay2: #939ab7;
+  --color-pink: #f5c2e7;
+  --color-maroon: #eba0ac;
+  --color-peach: #fab387;
+  --color-yellow: #f9e2af;
+  --color-teal: #94e2d5;
+  --color-sky: #89dceb;
+  --color-lavender: #b4befe;
 }
 
 body {

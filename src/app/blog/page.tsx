@@ -3,11 +3,11 @@ import { getSortedPostsData } from "@/lib/posts";
 import { BookText } from "lucide-react";
 
 const tagColorMap: { [key: string]: string } = {
-  rust: "bg-red/20 text-red border-red/30",
+  rust: "bg-peach/20 text-peach border-peach/30",
   systems: "bg-blue/20 text-blue border-blue/30",
   kernel: "bg-mauve/20 text-mauve border-mauve/30",
   webdev: "bg-green/20 text-green border-green/30",
-  os: "bg-yellow/20 text-yellow border-yellow/30",
+  os: "bg-red/20 text-red border-red/30",
   default: "bg-surface2/20 text-subtext1 border-surface2/30",
 };
 

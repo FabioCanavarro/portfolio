@@ -9,7 +9,6 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-// Add description and tags to the return type
 type PostData = {
   slug: string;
   title: string;

@@ -9,11 +9,15 @@ This is my first blog post! I'm excited to start sharing my journey.
 
 Here's an example of a code block:
 
+&nbsp;
+
 ```rust
 fn main() {
     println!("Welcome, to my first post!");
     println!("Hope that the posts after these benefits you greatly!");
 }
 ```
+
+&nbsp;
 
 I'll be writing about Rust, systems programming, and my various projects. Stay tuned!
