@@ -5,9 +5,7 @@ const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
-      // Extend your theme here if needed in the future
       colors: {
-        // You can import your Catppuccin colors here for re-use
         base: "#24273a",
         crust: "#1e2030",
         surface0: "#363a4f",
@@ -26,14 +24,28 @@ const config = {
       typography: ({ theme }) => ({
         invert: {
           css: {
-            // Here is where you customize the line spacing for paragraphs
             "p": {
-              lineHeight: '1.9rem', // Or use '1.8rem', '180%', etc.
+              lineHeight: '1.75',
             },
-            // You can customize other elements too
-            "h2, h3, h4": {
-              marginTop: '2em',
-              marginBottom: '1em',
+            // This is the correct way to style the note
+            "blockquote": {
+              fontStyle: 'italic',
+              color: theme('colors.subtext0'),
+              borderLeftWidth: '0.25rem', // Always use this over borderLeft
+              borderLeftColor: theme('colors.mauve'),
+              backgroundColor: theme('colors.crust / 0.7'),
+              paddingTop: '0.5rem',
+              paddingBottom: '0.5rem',
+              paddingLeft: '1.5rem',
+              paddingRight: '1.5rem',
+              borderRadius: '0.5rem',
+            },
+            // This removes the default quote marks from the blockquote
+            "blockquote p:first-of-type::before": {
+              content: 'none',
+            },
+            "blockquote p:last-of-type::after": {
+              content: 'none',
             },
           },
         },

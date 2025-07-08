@@ -53,11 +53,12 @@ export async function getPostData(slug: string) {
 
   // Calculate reading time
   const wordCount = matterResult.content.split(/\s+/g).length;
-  const readingTime = Math.ceil(wordCount / 200); // 200 words per minute
+  const readingTime = Math.ceil(wordCount / 200);
 
   const processedContent = await unified()
     .use(remarkParse)
-    .use(remarkRehype)
+    // REMOVE the allowDangerousHtml option from this line
+    .use(remarkRehype) 
     .use(rehypePrettyCode, {
       theme: "catppuccin-macchiato",
     })

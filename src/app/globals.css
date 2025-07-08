@@ -40,3 +40,19 @@ body {
 pre {
   background-color: var(--color-crust) !important;
 }
+
+.br {
+  display: block;
+  content: "";
+  margin-top: 1rem; /* More control over spacing */
+}
+
+.note-block {
+  background-color: theme('colors.crust / 0.7');
+  border-left: 4px solid theme('colors.mauve');
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  font-style: italic;
+  color: theme('colors.subtext0');
+}
