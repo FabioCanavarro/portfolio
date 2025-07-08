@@ -1,5 +1,3 @@
-// src/app/blog/[slug]/page.tsx
-
 import { getPostData, getAllPostSlugs } from "@/lib/posts";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import Link from "next/link";
@@ -28,9 +26,8 @@ export default async function Post({ params }: PostProps) {
   const postData = await getPostData(slug);
 
   return (
-    // 👇 This is the new wrapper with the background styles and padding
     <div className="bg-crust/50 backdrop-blur-sm border border-surface0 rounded-2xl p-8 md:p-12 shadow-lg shadow-crust/50">
-      <article className="prose prose-invert prose-lg max-w-none prose-pre:bg-crust prose-pre:border prose-pre:border-surface0 prose-headings:text-mauve prose-a:text-rosewater prose-strong:text-text">
+      <article className="prose prose-invert prose-lg max-w-none font-code prose-pre:bg-crust prose-pre:border prose-pre:border-surface0 prose-headings:text-mauve prose-a:text-rosewater prose-strong:text-text">
         <Link
           href="/blog"
           className="flex items-center text-subtext1 hover:text-text mb-8 no-underline"

@@ -5,6 +5,11 @@ const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-geist-sans)', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'monospace'],
+        code: ['"Fira Code"', 'monospace'], 
+      },
       colors: {
         base: "#24273a",
         crust: "#1e2030",

@@ -12,7 +12,7 @@ Here's an example of a code block:
 &nbsp;
 
 ```rust
-fn main() {
+fn main() -> () {
     println!("Welcome, to my first post!");
     println!("Hope that the posts after these benefits you greatly!");
 }
