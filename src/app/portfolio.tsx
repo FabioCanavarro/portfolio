@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import MainBody from "./_components/main-body";
 import Footer from "./_components/footer";
+import GridBackground from "./_components/grid-background";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -19,6 +20,8 @@ const jsonLd = {
     "A 16-year-old software developer specializing in Rust, systems programming, and building foundational technologies.",
   alumniOf: "Hackclub",
 };
+
+
 
 export default function Portfolio() {
   const [mounted, setMounted] = useState(false);
@@ -52,6 +55,7 @@ export default function Portfolio() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <GridBackground />
       <MainBody />
       <Footer />
     </div>
