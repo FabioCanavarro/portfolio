@@ -12,12 +12,20 @@ import {
   GitPullRequest,
   Building,
   Sparkles,
+  Database,
 } from "lucide-react";
 import AnimatedText from "./animated-text";
 import Link from "next/link";
 import AboutMe from "./about-me";
 
 const projects = [
+  {
+    title: "TransientDB",
+    description: "An intelligent, persistent key-value store built in Rust. Features a multi-tree architecture, atomic TTLs, and a concurrent background thread for data lifecycle management. Published to crates.io",
+    tags: ["Rust", "Systems Programming", "Database", "Concurrency", "sled", "Distributed Systems"],
+    icon: <Database className="w-6 h-6 text-peach" />,
+    link: "https://github.com/FabioCanavarro/TransientDB"
+  },
   {
     title: "UnitOS",
     description:
@@ -27,7 +35,7 @@ const projects = [
     link: "https://github.com/FabioCanavarro/UnitOS",
   },
   {
-    title: "FerrisLog & Server-Client",
+    title: "FerrisLog",
     description:
       "A persistent, log-structured key-value store in Rust, and a multi-threaded server-client implementation with a custom network protocol.",
     tags: ["Rust", "Distributed Systems", "Networking", "KVS"],
