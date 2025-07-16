@@ -20,11 +20,11 @@ import AboutMe from "./about-me";
 
 const projects = [
   {
-    title: "TransientDB",
+    title: "EpochDB",
     description: "An intelligent, persistent key-value store built in Rust. Features a multi-tree architecture, atomic TTLs, and a concurrent background thread for data lifecycle management. Published to crates.io",
-    tags: ["Rust", "Systems Programming", "Database", "Concurrency", "sled", "Distributed Systems"],
+    tags: ["Rust", "Systems Programming", "Database", "Concurrency", "sled", "Embedded Database"],
     icon: <Database className="w-6 h-6 text-peach" />,
-    link: "https://github.com/FabioCanavarro/TransientDB"
+    link: "https://github.com/FabioCanavarro/EpochDB"
   },
   {
     title: "UnitOS",
