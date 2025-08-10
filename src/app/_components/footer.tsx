@@ -36,7 +36,7 @@ export default function Footer() {
       </p>
       <iframe
         src="https://webring.hackclub.com/embed.html"
-        width="100px"
+        width="120px"
         height="60px"
         frameBorder="0"
         className="mx-auto mt-4"
