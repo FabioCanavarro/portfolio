@@ -22,8 +22,6 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // ... (menuVariants and linkVariants remain the same)
-
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -54,7 +52,18 @@ const Navbar = () => {
                   >
                     {link.name}
                   </a>
-                ))}
+                ))
+              }
+              {
+                isBlogPage && (
+                  <Link
+                    href="/"
+                    className="text-subtext1 hover:text-text px-3 py-2 rounded-md font-medium transition-colors bg-mauve/10 border border-mauve/20"
+                  >
+                    Home
+                  </Link>
+                )
+              }
               <Link
                 href="/blog"
                 className="text-subtext1 hover:text-text px-3 py-2 rounded-md font-medium transition-colors bg-mauve/10 border border-mauve/20"
@@ -86,7 +95,6 @@ const Navbar = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            // ... (variants remain the same)
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {!isBlogPage &&
@@ -96,13 +104,23 @@ const Navbar = () => {
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className="text-subtext1 hover:text-text hover:bg-surface0 block px-3 py-2 rounded-md font-medium transition-colors"
-                    // ... (variants remain the same)
                   >
                     {link.name}
                   </motion.a>
-                ))}
+                ))
+              }
+              {isBlogPage &&
+                <motion.a
+                  key="home"
+                  href="/"
+                  onClick={() => setIsOpen(false)}
+                  className="text-subtext1 hover:text-text hover:bg-surface0 block px-3 py-2 rounded-md font-medium transition-colors"
+                >
+                  Home
+                </motion.a>
+              }
+              
               <motion.div
-               // ... (variants remain the same)
               >
                 <Link
                   href="/blog"
