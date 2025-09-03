@@ -78,16 +78,28 @@ const projects = [
 
 const contributions = [
   {
+    repo: "p-r-a-v-i-n/scaligator",
+    description:
+      "Submitted a pull request to an intelligent Kubernetes Horizontal Pod Autoscaler alternative",
+    link: "https://github.com/p-r-a-v-i-n/scaligator/pulls?q=is%3Apr+author%3AFabioCanavarro",
+  },
+  {
     repo: "bifrost/bifrost",
     description:
       "Contributed to an open-source smart lighting system alternative.",
-    link: "https://github.com/chrivers/bifrost/pulls/FabioCanavarro",
+    link: "https://github.com/chrivers/bifrost/pulls?q=is%3Apr+author%3AFabioCanavarro",
+  },
+  {
+    repo: "p-r-a-v-i-n/rwatch",
+    description:
+      "Submitted a pull request to an eBPF-based threat detection tool",
+    link: "https://github.com/p-r-a-v-i-n/rwatch/pulls?q=is%3Apr+author%3AFabioCanavarro",
   },
   {
     repo: "infraust/infraust",
     description:
       "Submitted a pull request to a high-efficiency Minecraft server host.",
-    link: "https://github.com/Shadowner/Infrarust/pulls/FabioCanavarro",
+    link: "https://github.com/Shadowner/Infrarust/pulls?q=is%3Apr+author%3AFabioCanavarro",
   },
 ];
 
@@ -273,7 +285,7 @@ const MainBody = () => {
           <div id="opensource" className="absolute -top-24"></div>
           <h2 className="text-3xl font-bold mb-6 text-green flex items-center">
             <GitPullRequest className="w-6 h-6 mr-3" />
-            Open Source
+            Open Source Contributions
           </h2>
           <div className="space-y-4">
             {contributions.map((contrib, index) => (

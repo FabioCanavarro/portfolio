@@ -2,7 +2,7 @@ import { easeOut, motion } from "framer-motion";
 
 type AnimatedTextProps = {
   text: string;
-  el?: React.ElementType; // The element type can be 'p', 'h1', 'div', etc.
+  el?: React.ElementType; 
   className?: string;
 };
 
